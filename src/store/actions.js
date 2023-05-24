@@ -5,5 +5,4 @@ export const getMeals = ({ commit }, keyword) => {
         .then(({data}) => {
         commit('setMeals',data.meals)
     })  
-    
 }
