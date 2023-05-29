@@ -1,12 +1,7 @@
 <template lang="">
   <div>
     <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <h1 class="text-center">Search By Latter</h1>
-          <hr />
-        </div>
-      </div>
+      <Heading title="Search By Latter"/>
       <div class="row">
         <div class="col-12 mb-5">
           <div class="d-flex justify-content-center">
@@ -45,6 +40,7 @@
 <script setup>
 import { computed, ref } from "vue";
 import Meal from "../components/Meal.vue";
+import Heading from "../components/Heading.vue";
 import store from "../store";
 
 const latter = [

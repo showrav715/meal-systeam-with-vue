@@ -1,9 +1,8 @@
 <template lang="">
   <div class="container">
+    <Heading title="Search By Name"/>
     <div class="row">
-      <div class="col-12">
-        <h1 class="text-center">Search By Name</h1>
-        <hr />
+      
 
         <div class="col-md-6 offset-md-3">
           <div class="my-5">
@@ -16,7 +15,7 @@
             />
           </div>
         </div>
-      </div>
+      
     </div>
 
     <div class="row">
@@ -38,6 +37,7 @@
 <script setup>
 import { computed, ref } from "vue";
 import Meal from "../components/Meal.vue";
+import Heading from "../components/Heading.vue";
 import store from "../store";
 import { useRoute } from "vue-router";
 
