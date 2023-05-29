@@ -1,6 +1,6 @@
 <template lang="">
-  <div class="card">
-  <img class="card-img-top" :src="meal.strMealThumb" alt="Card image cap">
+  <div class="card rounded-start">
+  <img class="card-img-top"  :src="meal.strMealThumb" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{meal.strMeal}}</h5>
     <p class="card-text">{{meal.strInstructions.substring(0,120)}}</p>
