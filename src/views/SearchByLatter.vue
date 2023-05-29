@@ -14,7 +14,8 @@
               <button
                 type="button"
                 @click="handleSearchByLetter(l)"
-                class="btn btn-primary mx-1 " :class="keyword == l ? 'btn-danger' : ''"
+                class="btn btn-primary mx-1"
+                :class="keyword == l ? 'btn-danger' : ''"
                 v-for="l in latter"
                 :key="l"
               >
@@ -24,7 +25,6 @@
           </div>
         </div>
 
-       
         <div class="row">
           <div
             v-if="data && data.length != 0"
@@ -82,8 +82,7 @@ const data = computed(() => store.state.meals);
 console.log(data.value.length);
 const handleSearchByLetter = (key) => {
   keyword.value = key;
-    store.dispatch("getMealsByLetter", keyword.value);
-  
+  store.dispatch("getMealsByLetter", keyword.value);
 };
 </script>
 <style lang=""></style>

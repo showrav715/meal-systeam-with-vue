@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <h1 class="text-center">Search By Latter</h1>
+        <h1 class="text-center">Search By Name</h1>
         <hr />
 
         <div class="col-md-6 offset-md-3">
@@ -36,20 +36,15 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { computed, ref } from "vue";
 import Meal from "../components/Meal.vue";
 import store from "../store";
 import { useRoute } from "vue-router";
 
 const keyword = ref("");
-let data = ref([]);
-
-store.watch(
-  (state) => state.meals,
-  (val) => {
-    data.value = val;
-  }
-);
+const data = computed(() => {
+  return store.state.meals;
+});
 
 const route = useRoute();
 
